@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b36">
+  <meta name="description" content="Explora la biblioteca cristiana del grupo. Busca libros por título, autor o tema y ábrelos en Google Drive.">
+  <title>Biblioteca Cristiana 031</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--pine:#173b36;--pine-2:#24564c;--pine-soft:#e5eee9;--paper:#f8f6f0;--cream:#f0ece2;--white:#fffefa;--ink:#25352f;--muted:#64726b;--line:#dddcd3;--gold:#ba8d4b;--shadow:0 18px 50px rgba(24,49,38,.09);--sans:"DM Sans",system-ui,sans-serif;--serif:"Newsreader",Georgia,serif}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--sans)}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}.shell{width:min(1260px,calc(100% - 48px));margin:auto}
+    .topbar{background:var(--pine);color:#f5f2e9}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.02em}.brand-mark{display:grid;place-items:center;width:35px;height:35px;border:1px solid rgba(255,255,255,.5);border-radius:9px;color:#e8c686;font:500 25px/1 var(--serif)}.top-note{font-size:12px;color:#d6e2d8;letter-spacing:.11em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;background:var(--pine);color:#fff}.hero:before{content:"";position:absolute;width:650px;height:650px;right:-180px;top:-290px;border:1px solid rgba(255,255,255,.13);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.035),0 0 0 140px rgba(255,255,255,.025)}.hero:after{content:"✦";position:absolute;right:10%;top:110px;color:#d0aa69;font-size:64px;opacity:.75}.hero-inner{position:relative;padding:70px 0 74px;max-width:900px}.eyebrow{margin:0 0 14px;color:#d4b57e;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.hero h1{font:500 clamp(48px,7.5vw,92px)/.99 var(--serif);letter-spacing:-.045em;max-width:780px;margin:0}.hero h1 em{font-weight:400;color:#d9ba83}.hero-desc{max-width:560px;margin:24px 0 30px;color:#d9e5db;font-size:17px;line-height:1.65}.hero-stats{display:flex;flex-wrap:wrap;gap:20px 38px;align-items:center}.hero-stat strong{display:block;font:500 31px/1 var(--serif);color:#fff}.hero-stat span{display:block;margin-top:4px;color:#c3d5c9;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.hero-line{height:34px;width:1px;background:rgba(255,255,255,.25)}
+    .content{padding:48px 0 80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.section-kicker{margin:0 0 8px;color:#9e7440;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}.section-head h2{font:500 clamp(30px,4vw,43px)/1.1 var(--serif);letter-spacing:-.025em;margin:0}.section-copy{margin:0;color:var(--muted);max-width:480px;font-size:14px}.catalog-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:30px;align-items:start}.sidebar{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}.side-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;font-size:12px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:var(--muted)}.side-list{display:grid;gap:2px}.category{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px;border:0;border-radius:8px;background:transparent;color:var(--ink);text-align:left;font-size:13px;line-height:1.3}.category:hover{background:var(--cream)}.category[aria-pressed="true"]{background:var(--pine);color:white}.category-count{font-size:11px;font-variant-numeric:tabular-nums;opacity:.7}.side-foot{border-top:1px solid var(--line);padding-top:16px;margin-top:18px;color:var(--muted);font-size:12px;line-height:1.6}
+    .catalog-main{min-width:0}.toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;margin-bottom:15px}.search-wrap{position:relative}.search-icon{position:absolute;left:17px;top:50%;transform:translateY(-50%);width:19px;height:19px;pointer-events:none;color:var(--muted)}.search{width:100%;height:52px;padding:0 18px 0 48px;border:1px solid var(--line);border-radius:11px;background:var(--white);outline:none;color:var(--ink);box-shadow:0 6px 20px rgba(30,52,38,.035)}.search:focus,.sort:focus,.filter:focus{border-color:var(--pine-2);box-shadow:0 0 0 3px rgba(36,86,76,.13)}.search::placeholder{color:#88948d}.sort,.filter{height:52px;border:1px solid var(--line);border-radius:11px;background:var(--white);color:var(--ink);padding:0 34px 0 14px}.toolbar-selects{display:flex;gap:10px}.mobile-category{display:none}.result-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;color:var(--muted);font-size:13px}.result-bar strong{color:var(--ink)}.clear{border:0;background:none;color:var(--pine-2);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}.clear[hidden]{display:none}
+    .books{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.book{position:relative;display:flex;flex-direction:column;min-width:0;min-height:204px;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--white);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.book:hover{transform:translateY(-3px);border-color:#b9c9bd;box-shadow:var(--shadow)}.book-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.tag{font-size:10px;line-height:1.6;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:var(--pine-soft);color:var(--pine-2)}.tag.muted{background:#f1eee5;color:#806b4d}.code{margin-left:auto;font:600 11px/1.5 ui-monospace,Consolas,monospace;color:#a3885f}.book h3{margin:0 0 5px;font:500 23px/1.12 var(--serif);letter-spacing:-.01em;overflow-wrap:anywhere}.author{margin:0;color:var(--muted);font-size:13px}.book-bottom{margin-top:auto;padding-top:20px;display:flex;align-items:end;justify-content:space-between;gap:14px}.details{display:flex;flex-wrap:wrap;gap:3px 7px;color:var(--muted);font-size:11px}.details span:not(:last-child):after{content:"·";margin-left:7px}.open{flex:none;display:inline-flex;align-items:center;gap:8px;border-radius:8px;background:var(--pine);color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:9px 12px}.open:hover{background:var(--pine-2)}.pending{font-size:12px;color:var(--muted)}.empty{grid-column:1/-1;padding:64px 20px;text-align:center;background:var(--white);border:1px solid var(--line);border-radius:14px;color:var(--muted)}.empty strong{display:block;font:500 28px var(--serif);color:var(--ink);margin-bottom:8px}.more{display:block;margin:28px auto 0;padding:12px 24px;border:1px solid var(--pine);border-radius:9px;background:transparent;color:var(--pine);font-weight:700}.more:hover{background:var(--pine-soft)}.more[hidden]{display:none}
+    .access{background:var(--cream);border-top:1px solid var(--line)}.access-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding:40px 0}.access h2{font:500 28px/1.1 var(--serif);margin:0 0 9px}.access p{color:var(--muted);margin:0;font-size:13px;line-height:1.7}.access-badge{display:inline-block;color:var(--pine-2);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}.footer{background:var(--pine);color:#c8d6cc}.footer-inner{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}.footer strong{color:#fff;font-weight:600}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:1050px){.catalog-layout{grid-template-columns:210px minmax(0,1fr);gap:20px}.books{grid-template-columns:1fr}.book{min-height:175px}}@media(max-width:720px){.shell{width:min(100% - 30px,1260px)}.top-note{display:none}.hero-inner{padding:52px 0 58px}.hero:after{right:4%;top:55px;font-size:35px}.hero-desc{font-size:15px}.content{padding:38px 0 55px}.section-head{display:block}.section-copy{margin-top:8px}.catalog-layout{display:block}.sidebar{display:none}.toolbar{grid-template-columns:1fr}.toolbar-selects{display:grid;grid-template-columns:1fr 1fr}.mobile-category{display:block;grid-column:1/-1}.sort,.filter{width:100%}.access-inner{grid-template-columns:1fr;gap:22px}.footer-inner{padding:18px 0;align-items:flex-start;flex-direction:column;gap:4px}}@media(max-width:430px){.hero h1{font-size:46px}.hero-stats{gap:16px 26px}.hero-line{display:none}.book{padding:18px}.book h3{font-size:21px}.book-bottom{align-items:flex-start;flex-direction:column}.open{align-self:flex-end}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.book{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="shell topbar-inner"><a class="brand" href="#inicio" aria-label="Biblioteca Cristiana 031, ir al inicio"><span class="brand-mark" aria-hidden="true">B</span><span>Biblioteca Cristiana</span></a><span class="top-note">Una colección para seguir creciendo</span></div></div>
+  <header class="hero" id="inicio"><div class="shell hero-inner"><p class="eyebrow">Biblioteca del grupo · 031</p><h1>Un libro puede abrir <em>un camino.</em></h1><p class="hero-desc">Explora libros y recursos cristianos para estudiar, enseñar y crecer. Encuentra lo que necesitas y ábrelo desde Google Drive.</p><div class="hero-stats"><div class="hero-stat"><strong id="total">—</strong><span>Recursos</span></div><span class="hero-line" aria-hidden="true"></span><div class="hero-stat"><strong id="topic-total">—</strong><span>Temas</span></div><span class="hero-line" aria-hidden="true"></span><div class="hero-stat"><strong>24/7</strong><span>Para explorar</span></div></div></div></header>
+  <main class="content shell" id="catalogo"><div class="section-head"><div><p class="section-kicker">Explora la colección</p><h2>Encuentra tu próxima lectura</h2></div><p class="section-copy">Busca por título, autor o código. Filtra por tema o formato para encontrar el recurso adecuado.</p></div>
+    <div class="catalog-layout"><aside class="sidebar" aria-label="Filtrar por tema"><div class="side-title"><span>Temas</span><span aria-hidden="true">✦</span></div><div class="side-list" id="categories"></div><div class="side-foot">Los libros se abren en Google Drive. Necesitas acceso autorizado para verlos.</div></aside>
+      <div class="catalog-main"><div class="toolbar"><div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg><label for="q" class="sr-only">Buscar libros</label><input class="search" id="q" type="search" placeholder="Busca un título, autor o código…" autocomplete="off"></div><div class="toolbar-selects"><label for="category-mobile" class="sr-only">Tema</label><select id="category-mobile" class="filter mobile-category"><option value="">Todos los temas</option></select><label for="format" class="sr-only">Formato</label><select id="format" class="filter"><option value="">Todos los formatos</option></select><label for="sort" class="sr-only">Ordenar</label><select id="sort" class="sort"><option value="title">Título A–Z</option><option value="recent">Más recientes</option><option value="author">Autor A–Z</option><option value="pages">Menos páginas</option></select></div></div>
+      <div class="result-bar"><span id="status" role="status" aria-live="polite"></span><button class="clear" id="clear" type="button" hidden>Limpiar filtros</button></div><ol class="books" id="list"></ol><button class="more" id="more" type="button" hidden>Mostrar más</button></div></div>
+  </main>
+  <section class="access"><div class="shell access-inner"><div><span class="access-badge">Acceso a los libros</span><h2>Tu biblioteca, a un clic.</h2><p>Los recursos se guardan en Google Drive. Entra con la cuenta de Google autorizada para tu grupo. Si ves “Necesitas acceso”, pide al administrador que añada tu correo.</p></div><div><span class="access-badge">Formatos</span><h2>Lee a tu manera.</h2><p>Encontrarás PDF, EPUB y algunos documentos. Para leer EPUB en el teléfono puedes usar una aplicación de lectura compatible.</p></div></div></section>
+  <footer class="footer"><div class="shell footer-inner"><strong>Biblioteca Cristiana 031</strong><span>Una colección para compartir, aprender y crecer.</span></div></footer>
+  <script>
+  const BOOKS = __BOOKS__;
+  const CATS = __CATS__;
+  const PAGE_SIZE = 40;
+  const $ = id => document.getElementById(id);
+  const normalize = value => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+  const categoryNames = new Map(CATS);
+  const state = { query:"", category:"", format:"", sort:"title", shown:PAGE_SIZE };
+  const counts = new Map(CATS.map(([code]) => [code, 0]));
+  BOOKS.forEach(book => { book.search = normalize([book.k,book.t,book.a,categoryNames.get(book.c)].join(" ")); counts.set(book.c,(counts.get(book.c)||0)+1); });
+  $("total").textContent = BOOKS.length.toLocaleString("es");
+  $("topic-total").textContent = CATS.filter(([code]) => counts.get(code)).length;
+  function buildCategories(){
+    const options = [["","Todos los temas",BOOKS.length],...CATS.filter(([code]) => counts.get(code)).map(([code,name]) => [code,name,counts.get(code)])];
+    const holder = $("categories"); holder.replaceChildren();
+    const mobile = $("category-mobile"); mobile.replaceChildren();
+    options.forEach(([code,name,count]) => {
+      const button=document.createElement("button"); button.type="button"; button.className="category"; button.dataset.category=code; button.setAttribute("aria-pressed",String(state.category===code));
+      const label=document.createElement("span"); label.textContent=name; const n=document.createElement("span"); n.className="category-count"; n.textContent=count.toLocaleString("es"); button.append(label,n);
+      button.addEventListener("click",()=>{state.category=code;state.shown=PAGE_SIZE;syncCategories();render();}); holder.append(button);
+      const option=document.createElement("option"); option.value=code; option.textContent=name; mobile.append(option);
+    });
+    const formats=[...new Set(BOOKS.map(b=>b.f.toLowerCase()))].sort();
+    formats.forEach(format=>{const option=document.createElement("option");option.value=format;option.textContent=format.toUpperCase();$("format").append(option);});
+  }
+  function syncCategories(){document.querySelectorAll("button.category").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.category===state.category)));$("category-mobile").value=state.category;}
+  function results(){
+    const words=normalize(state.query).trim().split(/\s+/).filter(Boolean);
+    const items=BOOKS.filter(book=>(!state.category||book.c===state.category)&&(!state.format||book.f.toLowerCase()===state.format)&&words.every(word=>book.search.includes(word)));
+    const collator=new Intl.Collator("es",{sensitivity:"base"});
+    if(state.sort==="recent")items.sort((a,b)=>(b.d||"").localeCompare(a.d||"")||collator.compare(a.t,b.t));
+    else if(state.sort==="author")items.sort((a,b)=>collator.compare(a.a||"zzz",b.a||"zzz")||collator.compare(a.t,b.t));
+    else if(state.sort==="pages")items.sort((a,b)=>(a.p||Infinity)-(b.p||Infinity)||collator.compare(a.t,b.t));
+    else items.sort((a,b)=>collator.compare(a.t,b.t));
+    return items;
+  }
+  function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
+  function makeBook(book){
+    const li=el("li","book"); const top=el("div","book-top"); top.append(el("span","tag",categoryNames.get(book.c)||"Otro"));
+    if(book.sc)top.append(el("span","tag muted","Escaneado")); if(book.mt)top.append(el("span","tag muted","Traducción automática")); top.append(el("span","code",book.k)); li.append(top);
+    li.append(el("h3","",book.t)); if(book.a)li.append(el("p","author",book.a));
+    const bottom=el("div","book-bottom"); const details=el("div","details"); [book.f.toUpperCase(),book.l&&book.l!=="es"?book.l.toUpperCase():null,book.p?`${book.p} págs.`:null,book.s?`${(book.s/1048576).toFixed(1)} MB`:null].filter(Boolean).forEach(value=>details.append(el("span","",value))); bottom.append(details);
+    if(book.id){const link=el("a","open","Abrir ↗");link.href=`https://drive.google.com/file/d/${encodeURIComponent(book.id)}/view`;link.target="_blank";link.rel="noopener noreferrer";link.setAttribute("aria-label",`Abrir ${book.t} en Google Drive`);bottom.append(link);}else bottom.append(el("span","pending","Pendiente")); li.append(bottom); return li;
+  }
+  function render(){
+    const items=results(); const list=$("list"); const fragment=document.createDocumentFragment();
+    if(!items.length){const empty=el("li","empty");empty.append(el("strong","","No encontramos resultados"),document.createTextNode("Prueba con otra palabra o limpia los filtros."));fragment.append(empty);}
+    else items.slice(0,state.shown).forEach(book=>fragment.append(makeBook(book)));
+    list.replaceChildren(fragment);
+    $("status").innerHTML=`<strong>${items.length.toLocaleString("es")}</strong> ${items.length===1?"recurso encontrado":"recursos encontrados"}`;
+    $("clear").hidden=!(state.query||state.category||state.format||state.sort!=="title");
+    $("more").hidden=items.length<=state.shown; $("more").textContent=`Mostrar más · ${(items.length-state.shown).toLocaleString("es")} restantes`;
+  }
+  buildCategories(); render();
+  let timer; $("q").addEventListener("input",event=>{clearTimeout(timer);timer=setTimeout(()=>{state.query=event.target.value;state.shown=PAGE_SIZE;render();},100);});
+  $("category-mobile").addEventListener("change",event=>{state.category=event.target.value;state.shown=PAGE_SIZE;syncCategories();render();});
+  $("format").addEventListener("change",event=>{state.format=event.target.value;state.shown=PAGE_SIZE;render();});
+  $("sort").addEventListener("change",event=>{state.sort=event.target.value;state.shown=PAGE_SIZE;render();});
+  $("clear").addEventListener("click",()=>{state.query="";state.category="";state.format="";state.sort="title";state.shown=PAGE_SIZE;$("q").value="";$("format").value="";$("sort").value="title";syncCategories();render();});
+  $("more").addEventListener("click",()=>{state.shown+=PAGE_SIZE;render();});
+  </script>
+</body>
+</html>
