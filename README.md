@@ -1,6 +1,6 @@
-# Biblioteca Cristiana 031
+# Biblioteca
 
-Catálogo web de la biblioteca del grupo. El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros.
+Catálogo web de la biblioteca. El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros.
 
 ## Publicación
 
