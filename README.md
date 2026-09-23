@@ -1,6 +1,6 @@
-# Biblioteca
+# ALEX
 
-Catálogo web de la biblioteca. El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros.
+ALEX significa Archive & Library EXplorer. Catálogo web de la biblioteca. El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros.
 
 ## Publicación
 
