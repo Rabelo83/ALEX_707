@@ -1,5 +1,5 @@
 param(
-  [string]$CatalogPath = (Join-Path $PSScriptRoot '..\Catálogo - abrir en el navegador.html')
+  [string]$CatalogPath = (Join-Path $PSScriptRoot ('..\Cat' + [char]0x00E1 + 'logo - abrir en el navegador.html'))
 )
 $ErrorActionPreference = 'Stop'
 $source = [System.IO.File]::ReadAllText((Resolve-Path -LiteralPath $CatalogPath).Path, [System.Text.Encoding]::UTF8)
