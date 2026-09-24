@@ -1,15 +1,13 @@
 # ALEX
 
-ALEX significa Archive & Library EXplorer. Catálogo web de la biblioteca. El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros.
+ALEX significa Archive & Library EXplorer. Catálogo web de la biblioteca: https://rabelo83.github.io/ALEX_707/
 
-## Publicación
+El sitio contiene metadatos y enlaces a Google Drive; no contiene los libros. La fuente de los datos es `data/catalogo.json`.
 
-GitHub Pages sirve `index.html` desde la rama `main`, carpeta raíz.
+| Script | Para qué |
+|---|---|
+| `agregar-libros.ps1` | Clasifica y agrega los libros de la carpeta DropBox |
+| `build.ps1` | Genera el sitio, la página local y la hoja de cálculo desde `catalogo.json` |
+| `verificar.ps1` | Comprueba que el catálogo, los archivos, la página y la hoja coinciden |
 
-## Actualizar el catálogo
-
-1. Actualiza el archivo `Catálogo - abrir en el navegador.html` de la carpeta Libreria.
-2. Desde esta carpeta, ejecuta `powershell -ExecutionPolicy Bypass -File .\build.ps1`.
-3. Revisa `index.html` y publícalo en GitHub.
-
-Los libros permanecen en Google Drive. La página y sus títulos son públicos cuando GitHub Pages está activado; el acceso a los archivos depende de los permisos de Drive.
+Paso a paso: [INSTRUCCIONES.md](INSTRUCCIONES.md).
